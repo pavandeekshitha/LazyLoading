@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-5" >
+
+<!--     simple basic data binding example 
+        <p>"<span [innerHTML]="title"></span>" is the <i>property bound with [] square brackts</i></p>
+        <p>"<span innerHTML={{title}}></span>" is the <i>property bound with  curly braces</i></p>
+        <div>
+          <p>two way data binding </p>
+            <input [(ngModel)]="name">   
+            <p>{{name}}</p>
+        </div> -->
+      <!-- product list  --> 
+     
+      <div class="row">
+          <div class="col-md-5">
+            <app-product-list
+              (productSelected)="selectedProduct=$event"></app-product-list>
+          </div>
+          <div class="col-md-7">
+            <app-product-detail
+              *ngIf="selectedProduct; else infoText"
+              [product]="selectedProduct"></app-product-detail>
+            <ng-template #infoText>
+              <p>Please select a product!</p>
+            </ng-template>
+          </div>
+        </div>
+        
+      <!-- product details on clicking the list -->
+
+    </div>
+</div>

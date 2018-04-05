@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="product.imagePath" alt="{{ product.name }}" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h4>{{ product.name }}</h4>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    {{ product.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <label for="price">Price</label>
+    <input type="text" id="price" [readonly]='true' class="form-control">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <label for="quantity">Quantity Available</label>
+    <input type="text" [readonly]='true' class="form-control">
+
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-xs-8">
+    <label for="qtyrequired">Quantity Required</label>
+    <input type="text" class="form-control">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="onAddProduct()">Add to Cart</button>
+
+</div> -->
+
+<div class="row">
+    <div class="col-xs-12" >
+      <div
+        class="row"
+        style="margin-top: 10px;">
+        <div class="col-xs-8">
+          <label for="quantity">Qty Required</label>
+          <input type="text" class="form-control">
+        </div>
+      
+      
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="onAddProduct()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>

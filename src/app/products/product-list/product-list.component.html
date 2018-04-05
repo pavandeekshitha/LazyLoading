@@ -1,0 +1,39 @@
+<!-- product list ngFor directive to show all the products  -->
+<!--  <div class="row">
+  <div class="col-xs-12">
+      <ul>
+          <li *ngFor="let product of products">{{product.name}} , {{product.description}}</li>
+        </ul>
+  </div>
+</div> -->
+
+<!-- event binding  and ngIf -->
+<!-- <h2>Products List</h2>
+<ul class="products">
+  <li *ngFor="let product of products"
+    [class.selected]="product === selectedProduct"
+    (click)="onProductSlected(product)">
+    <span class="badge">{{product.name}}</span> {{product.description}}
+  </li>
+</ul>
+f
+<div *ngIf="selectedProduct">
+  <div><span>name: </span>{{selectedProduct.name}}</div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="selectedProduct.description" placeholder="desc">
+    </label>
+  </div>
+</div> -->
+
+<div class="row">
+    <div class="col-xs-12">
+      <app-product-item
+        *ngFor="let productElement of products"
+        [productInfoFromParent]="productElement" 
+        (productSelected)="onSelected(productElement)" ></app-product-item>
+    </div>
+  </div>
+  
+
+
